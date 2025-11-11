@@ -4,7 +4,7 @@
 ![Kickstarter](https://img.shields.io/badge/Kickstarter-DApp-blue?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=white&style=flat)
 ![Web3.js](https://img.shields.io/badge/Web3.js-1.8.0-orange?logo=ethereum&logoColor=white&style=flat)
-![Solidity](https://img.shields.io/badge/Solidity-0.8.9-363636?logo=solidity&logoColor=white&style=flat)
+![Solidity](https://img.shields.io/badge/Solidity-0.4.17-363636?logo=solidity&logoColor=white&style=flat)
 ![Sepolia](https://img.shields.io/badge/Testnet-Sepolia-00C4B8?style=flat)
 
 ---
