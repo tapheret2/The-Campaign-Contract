@@ -12,10 +12,11 @@ contract Campaign
         mapping(address => bool) approvals;
     }
 
+    Request[] public requests;
     address public manager;
     uint public minimumContribution;
     mapping(address => bool) public approvers;
-    Request[] public requests;
+    uint public approversCount;
 
     modifier restricted()
     {
@@ -34,6 +35,7 @@ contract Campaign
         require(msg.value>minimumContribution);
 
         approvers[msg.sender]=true;
+        approversCount++;
     }
 
     function createRequest(string description,uint value,address recipient) public restricted
@@ -50,6 +52,7 @@ contract Campaign
 
         requests.push(newRequest);
     }
+
     function approveRequest(uint index) public 
     {
        Request storage request=requests[index];
@@ -59,5 +62,16 @@ contract Campaign
 
        request.approvals[msg.sender]=true;
        request.approvalCount++; 
+    }
+
+    function finalizeRequest(uint index) public restricted
+    {
+        Request storage request=requests[index];
+
+        require(request.approvalCount>(approversCount/2));
+        require(!request.complete);
+
+        request.recipient.transfer(request.value);
+        request.complete=true;
     }
 }
