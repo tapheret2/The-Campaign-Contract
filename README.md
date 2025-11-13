@@ -52,8 +52,8 @@ A **decentralized crowdfunding platform** built with **Solidity**, powered by a 
 
 ```bash
 # 1. Clone the project
-git clone https://github.com/tapheret2/kickstarter-dapp.git
-cd kickstarter-dapp
+git clone https://github.com/tapheret2/The-Campaign-Contract
+cd The-Campaign-Contract
 
 # 2. Install dependencies
 npm install
