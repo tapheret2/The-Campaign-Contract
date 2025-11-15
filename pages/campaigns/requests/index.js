@@ -1,9 +1,19 @@
 import React,{Component} from 'react'
+import {Button} from 'semantic-ui-react';
+import {Link} from '../../../routes';
+import Layout from '../../../components/Layout';
 
 class RequestIndex extends Component{
     render() {
         return (
-            <h3>Request List</h3>
+            <Layout>
+                <h3>Requests</h3>
+                <Link>
+                    <a>
+                        <Button primary>Add Requests</Button>
+                    </a>
+                </Link>
+            </Layout>>
         )
     }
 }
